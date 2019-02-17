@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style type="text/css">
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.container {
+    width: 40px;
+    height: 40px;
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head><!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style type="text/css">
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+img {
+  border-radius: 50%;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+body,html{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+.typing > *{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingAnim 5s steps(50);
+}
+.typing > *::after{
+  content: ". .";
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: .35em;
+}
+.typing > *::before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 2.1em;
+  left: .25em;
+  width: 1em;
+  height: .1em;
+  border-radius: 100%;
+  background: #fff;
+  animation: typingSpeak .5s steps(2);
+  animation-iteration-count: 5;
+}
+@keyframes typingAnim{
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes typingSpeak{
+  0% { width: 1em; height: .1em }
+  100% { width: 1em; height: .5em; }
+}
+***
+</style>
+</head>
+
+
+<body>
+<ul>
+  <li><a class="active" href="http://127.0.0.1:5000">Home</a></li>
+  <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+  <li><a href="http://127.0.0.1:5000/about">About</a></li>
+  <li><a href="http://127.0.0.1:5000/news">News</a></li>
+  <li><a href="http://127.0.0.1:5000/twitter">Twitter</a></li>
+</ul>
+	<div><br><br>
+		<CENTER><h2>Comment Filter</h2></CENTER>
+		
+	</div>
+<CENTER>
+	<div>
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Comment Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="comment" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="w3-button w3-black w3-round-xlarge" value="Predict">
+		
+	</form>
+		
+	</div>
+
+</CENTER>
+<br><br><br><br><br><br><br><br><br>
+<footer><CENTER>
+This website was built as a response to the problem posted in DuckHacks 2019.<br><br>
+ <a href="https://www.linkedin.com/in/ayushkalla/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class = "container"> </a>
+<a href="http://127.0.0.1:5000/complain"><img src = "https://cdn4.iconfinder.com/data/icons/happily-colored-snlogo/512/gmail-email-mail-logo-circle-material.png" class="container"></a>
+ <a href="https://www.github.com/akalla123"><img src = "http://pluspng.com/img-png/github-octocat-logo-png-and-github-master-could-be-this-896.jpg" class="container"></a><br>
+ </CENTER>
+</footer>
+	
+
+</body>
+</html>
